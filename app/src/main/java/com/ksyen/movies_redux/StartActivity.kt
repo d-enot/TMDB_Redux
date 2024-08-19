@@ -12,19 +12,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ksyen.movies_redux.ui.theme.Movies_reduxTheme
+import com.ksyen.movies_redux.videosbottombar.VideosBottomBarView
+import dagger.hilt.android.AndroidEntryPoint
 
-class VideosActivity : ComponentActivity() {
+@AndroidEntryPoint
+class StartActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             Movies_reduxTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                VideosBottomBarView(modifier = Modifier)
             }
         }
     }

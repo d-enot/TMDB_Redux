@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Movies_redux</string>
+    <string name="bottom_tab_on_air">On air</string>
+    <string name="bottom_tab_popular">Popular</string>
 </resources>
